@@ -1,0 +1,221 @@
+#wrapper{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: var(--bg-color);
+    font-family: 'poppins', sans-serif;
+    overflow-x: hidden;
+}
+:root{
+    --bg-color: #fdfdfd;
+    --text-color: #333;
+    --main-color: #754ef9;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0,0,0,0.2);
+    --bag-color: #fff;
+}
+.dark-mode{
+    --bg-color: #0b061f;
+    --text-color: #fdfdfd;
+    --shadow-color: rgba(0,0,0,.7);
+    --bag-color: #130d2e;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.header{
+    padding: 0 7%;
+    padding-top: 3rem;
+}
+#bot-icon{
+    font-size: 3rem;
+    color: #333;
+    font-weight: 600;
+    margin-right: auto;
+    cursor: pointer;
+    padding: 8px;
+    background: #0ef;
+    border-radius: 50%;
+    animation: pulseAnimate 1s linear infinite;
+}
+@keyframes pulseAnimate {
+    0%{
+        box-shadow: 0 0 0 0 rgba(0, 206, 209, 0.7);
+    }
+    40%{
+        box-shadow: 0 0 0 20px rgba(0, 206, 209, 0);
+    }
+    80%{
+        box-shadow: 0 0 0 20px rgba(0, 206, 209, 0.7);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(0, 206, 209, 0);
+    }
+}
+#darkMode-icon{
+    float: right;
+    font-size: 3rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.container{
+    margin: 0 auto;
+    width: 95%;
+    height: 80vh;
+    padding: 0.625em;
+    margin-top: 4rem;
+    border-radius: 8px;
+    box-shadow: 12px 12px 20px #cbced1;
+}
+
+.display #screen{
+    width: 99%;
+    height: 8rem;
+    font-size: 2.8rem;
+    outline: none;
+    border: none;
+    text-align: right;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 6px;
+    box-shadow: inset 8px 8px 8px #cbced1,
+                inset -8px -8px 8px var(--bg-color);
+}
+input::placeholder{
+    color: var(--text-color);
+    padding-right: .4em;
+}
+/************BUTTON PART***************/
+.btns{
+    width: 100%;
+    margin-top: 1.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btns .row button{
+    width: 13em;
+    height: 6rem;
+    font-size: 1.4em;
+    font-weight: 500;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    margin: .35rem;
+    background: var(--bag-color);
+    border-radius: 4px;
+    box-shadow: 5px 5px 8px #00000020,
+                -5px -5px 8px #ffffff;
+                transition: .1s;
+}
+.btns .row span{
+    border-radius: 50%;
+    font-weight: 800;
+}
+.btns .row button:hover{
+    box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),
+                inset -5px -5px 8px var(--bag-color);
+                background: var(--bag-color);
+}
+
+#eval{
+    background: #33ccff;
+    color: #fff;
+    box-shadow: inset 5px 5px 8px #66d9ff,
+                inset -5px -5px 8px #00ace6;
+}
+#eval:hover{
+    box-shadow: inset 5px 5px 8px #00ace6,
+                inset -5px -5px 8px #00ace6;
+}
+
+#ac{
+    background: #33cc33;
+    color: #fff;
+}
+#ac:hover{
+    box-shadow: inset 5px 5px 8px #2eb82e,
+                inset -5px -5px 8px #33cc33;
+}
+
+#ce{
+    background: #ff3399;
+    color: #fff;
+}
+#ce:hover{
+    box-shadow: inset 5px 5px 8px #e60073,
+                inset -5px -5px 8px #ff3399;
+}
+
+
+
+
+
+
+
+
+
+/**************BREAK POINT**************/
+/**************BREAK POINT**************/
+
+@media (max-width: 1200px) {
+    .btns .row button{
+        width: 10em;
+        height: 5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .btns .row button{
+        width: 8em;
+        height: 4rem;
+    }
+}
+@media (min-height: 900px) {
+    .container{
+        height: 60vh;
+    }
+    .btns .row button{
+        height: 6rem;
+    }
+}
+@media (max-width: 430px) {
+    .container{
+        width: 100%;
+        height: 60vh;
+    }
+    .display #screen{
+        width: 96%;
+    }
+    .btns .row button{
+        width: 4em;
+        height: 3.5rem;
+        margin: .23rem;
+        box-shadow: 3px 3px 6px #00000020,
+                   -3px -3px 6px #ffffffa2;
+    }
+}
+@media (max-width: 390px) {
+    .btns .row button{
+        width: 3.6em;
+        height: 3.1rem;
+    }
+}
+@media (max-width: 320px){
+    .btns .row button{
+        width: 3.2em;
+        height: 3.1rem;
+        margin: .1rem;
+        box-shadow: 3px 3px 6px #00000020,
+                   -3px -3px 6px #ffffffa2;
+    }
+}
